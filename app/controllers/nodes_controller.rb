@@ -25,6 +25,7 @@ class NodesController < ApplicationController
   # POST /nodes.json
   def create
     @node = Node.new(node_params)
+    @node.user = current_user
 
     respond_to do |format|
       if @node.save
@@ -69,6 +70,6 @@ class NodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def node_params
-      params.require(:node).permit(:lat, :lng, :user_id)
+      params.require(:node).permit(:lat, :lng, :user_id, :description)
     end
 end

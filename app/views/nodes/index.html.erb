@@ -11,13 +11,13 @@
       <th></th>
     </tr>
   </thead>
-
-  <tbody>
+	<div id="map_canvas"></div>
+  <tbody data-nodes="<%= @nodes.to_json %>">
     <% @nodes.each do |node| %>
       <tr>
         <td><%= node.lat %></td>
         <td><%= node.lng %></td>
-        <td><%= node.user_id %></td>
+        <td><%= node.user.email %></td>
         <td><%= link_to 'Show', node %></td>
         <td><%= link_to 'Edit', edit_node_path(node) %></td>
         <td><%= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -44,6 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'protected_attributes'
 gem 'devise'
 gem 'slim'
+gem 'cancan'
+gem 'geokit'
+gem 'geokit-rails'

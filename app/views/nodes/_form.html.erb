@@ -11,18 +11,27 @@
     </div>
   <% end %>
 
+  <div id="map_canvas"></div>
+  
   <div class="field">
     <%= f.label :lat %><br>
-    <%= f.text_field :lat %>
+    <%= f.text_field :lat, :disabled => true %>
   </div>
   <div class="field">
     <%= f.label :lng %><br>
-    <%= f.text_field :lng %>
+    <%= f.text_field :lng, :disabled => true %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+	<div class="field">
+		<%= f.label :city %><br />
+		<%= f.text_field :city, :value => "Florianópolis" %>
+	</div>
+	<div class="field">
+		<%= f.label :address %><br />
+		<%= f.text_field :address %>
+	</div>
+	<div class="field">
+		<%= f.label :description %><br />
+		<%= f.text_area :description %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -5,12 +5,14 @@ html
     title Node DB
     = stylesheet_link_tag 'application', media: "all", 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Configuration['google_map_api']}&sensor=true"
     = csrf_meta_tags
-  body
+  body data-controller="#{controller.controller_name}" data-action="#{controller.action_name}"
     header
       h1= link_to 'Node DB', root_path
       ul
         - if current_user
+          = link_to 'Account', users_path
           = link_to 'Logout', destroy_user_session_path, :method => :delete
         - else  
           = link_to 'Login', new_user_session_path

@@ -1,7 +1,8 @@
 Nodedb::Application.routes.draw do
   resources :nodes
+  resources :users
 
-  devise_for :users
+  devise_for :users, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout'}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
