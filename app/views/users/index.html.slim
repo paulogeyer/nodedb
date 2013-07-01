@@ -1,0 +1,7 @@
+h1= current_user.email
+
+= t('my_nodes')
+ul
+  - current_user.nodes.each do |node|
+    li= link_to "#{node.id}, lat #{node.lat}, lng: #{node.lng}", node
+  
