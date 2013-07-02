@@ -22,7 +22,7 @@ initMap = ->
   window.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
 
 initNew = ->
-  return if $("body").data('action') != 'new'
+  return unless $("body").data('action') == 'new' or $("body").data('action') == 'edit'
   geocoder = new google.maps.Geocoder();
   $("#node_address, #node_city").bindWithDelay(
     "keyup",
