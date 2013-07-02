@@ -5,7 +5,7 @@ class NodesController < ApplicationController
   # GET /nodes
   # GET /nodes.json
   def index
-    @nodes = Node.all
+    @nodes = Node.limit(5).order("created_at desc")
   end
 
   # GET /nodes/1

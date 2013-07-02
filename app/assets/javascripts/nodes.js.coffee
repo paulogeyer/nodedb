@@ -66,7 +66,7 @@ initNew = ->
 initIndex = ->
   return if $("body").data('action') != 'index'
   initMap()
-  window.nodes = $("tbody").data('nodes')
+  window.nodes = $("ul#nodes").data('nodes')
   window.markers = []
   window.infoWindows = []
   for node in window.nodes

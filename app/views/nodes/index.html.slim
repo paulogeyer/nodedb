@@ -1,0 +1,12 @@
+#map_canvas
+
+h2 Últimos nodes adicionados  
+ul#nodes data-nodes=@nodes.to_json
+  - @nodes.each do |node|
+    li
+      = link_to "Node #{node.id}", node
+      br
+      = node.user.email
+
+- if current_user
+  = link_to t('new_node'), new_node_path
