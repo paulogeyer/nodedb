@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130701023615) do
+ActiveRecord::Schema.define(version: 20130702004328) do
 
   create_table "configurations", force: true do |t|
     t.string   "name",       null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130701023615) do
     t.string   "neighbourhood"
     t.string   "city"
     t.string   "street"
+    t.string   "address"
   end
 
 # Could not dump table "users" because of following NoMethodError

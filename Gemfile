@@ -44,7 +44,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'slim'
 gem 'cancan'
 gem 'geokit'

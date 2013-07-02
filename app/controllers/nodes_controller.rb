@@ -1,4 +1,5 @@
 class NodesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_node, only: [:show, :edit, :update, :destroy]
 
   # GET /nodes
@@ -70,6 +71,6 @@ class NodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def node_params
-      params.require(:node).permit(:lat, :lng, :user_id, :description)
+      params.require(:node).permit(:lat, :lng, :city, :address, :description, :user_id)
     end
 end

@@ -8,4 +8,11 @@ class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :nodes
+  def admin?
+    if admin == 't'
+      true
+    else
+      false
+    end
+  end
 end
